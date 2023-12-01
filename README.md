@@ -100,7 +100,7 @@ Include the database schema and any relevant information about your data models.
 ```bash
 // Student Schema
 const studentSchema = new mongoose.Schema({
-  name:  String,
+  name: {  type:  String,  unique:  true  },
   email:  {  type:  String,  unique:  true  },
   department:  String,
   password:  String,
