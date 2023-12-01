@@ -13,15 +13,22 @@ async function addStudent(req, res) {
         message: 'Email already exists. Please use a different email.',
       });
     }
+
+    const existingName = await Student.findOne({ name });
+
+    if (existingName) {
+      return res.status(409).json({
+        message: 'Name already exists. Please use give a different name.',
+      });
+    }
+
     const student = new Student(req.body);
     await student.save();
-    res
-      .status(201)
-      .json({
-        message: 'Student added successfully',
-        name: student.name,
-        email: student.email,
-      });
+    res.status(201).json({
+      message: 'Student added successfully',
+      name: student.name,
+      email: student.email,
+    });
   } catch (error) {
     res.status(500).json({ message: 'Error adding student', error });
   }

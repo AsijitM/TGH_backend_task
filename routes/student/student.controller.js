@@ -41,7 +41,7 @@ async function updateTasks(req, res) {
     if (!student) {
       return res.status(404).json({ message: 'Student not found' });
     }
-
+    console.log(student);
     // Find the task assigned to the student by task name
     const task = await Task.findOne({
       assignedTo: student._id,
