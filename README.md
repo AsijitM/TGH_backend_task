@@ -5,12 +5,13 @@
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/yourusername/task-management-system)](https://github.com/yourusername/task-management-system/pulls)
 
 
-[<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://app.getpostman.com/run-collection/your-collection-id](https://documenter.getpostman.com/view/20354582/2s9YeHbWqD))
-
+[<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://app.getpostman.com/run-collection/20354582-a5a2d987-e8b4-4834-a827-461a1b73ae72?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D20354582-a5a2d987-e8b4-4834-a827-461a1b73ae72%26entityType%3Dcollection%26workspaceId%3Dbc39cd26-7f32-4ef4-a99e-7ab7b8ab8696)
 
 ## Overview
 A basic student management system API using ExpressJS which includes some interesting features mentioned below.
 
+## Postman Documentation
+https://documenter.getpostman.com/view/20354582/2s9YeHbWqD
 
 ## Deployed Link
 https://student-admin-management.onrender.com
