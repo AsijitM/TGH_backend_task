@@ -1,6 +1,6 @@
 # Task Management System
 
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 [![GitHub Issues](https://img.shields.io/github/issues/yourusername/task-management-system)](https://github.com/yourusername/task-management-system/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/yourusername/task-management-system)](https://github.com/yourusername/task-management-system/pulls)
 
