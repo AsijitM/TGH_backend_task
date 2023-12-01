@@ -12,6 +12,9 @@
 A basic student management system API using ExpressJS which includes some interesting features mentioned below.
 
 
+## Deployed Link
+https://student-admin-management.onrender.com
+
 ## Table of Contents
 
 - [Installation](#installation)
