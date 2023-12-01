@@ -3,7 +3,7 @@ const Task = require('../../models/task.model');
 
 async function addStudent(req, res) {
   try {
-    const { name, email, department, password } = req.body;
+    const { name, email, department, password, role } = req.body;
 
     // Check if the email is already in use
     const existingStudent = await Student.findOne({ email });
