@@ -3,16 +3,16 @@ const Student = require('../../models/student.model');
 
 const loginRouter = express.Router();
 
-const adminCredentials = { email: 'admin@admin.com', password: 'admin' };
 
 // Common login endpoint
 loginRouter.post('/', async (req, res) => {
   try {
     const { email, password } = req.body;
+
     // Check if the user is an admin
     if (
-      email === adminCredentials.email &&
-      password === adminCredentials.password
+      email === process.env.ADMIN_EMAIL &&
+      password === process.env.ADMIN_PASSWORD
     ) {
       // Admin login
       res.status(200).redirect('admin/admin-panel');
@@ -24,11 +24,11 @@ loginRouter.post('/', async (req, res) => {
         return res.status(401).json({ message: 'Invalid credentials' });
       }
 
-        // converting the ObjectID to get the data
+      // converting the ObjectID to get the data
       const idValue = student._id.toHexString();
-    //   console.log("id",idValue);
+      //   console.log("id",idValue);
 
-    //   console.log('s', student._id);
+      //   console.log('s', student._id);
       res.status(200).redirect(`/student/${idValue}`);
     }
   } catch (error) {
