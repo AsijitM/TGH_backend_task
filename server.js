@@ -20,12 +20,21 @@ app.use('/login', loginRouter);
 
 // Start the server
 
-async function startServer() {
-  await connectDB().then(() => {
-    app.listen(PORT, () => {
-      console.log(`Server is running on port ${PORT}`);
-    });
-  });
-}
+// async function startServer() {
+//   await connectDB().then(() => {
+//     app.listen(PORT, () => {
+//       console.log(`Server is running on port ${PORT}`);
+//     });
+//   });
+// }
+
+const startServer = async () => {
+  try {
+    await connectDB();
+    app.listen(PORT, () => console.log('Server has started on port 3000'));
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 startServer();
