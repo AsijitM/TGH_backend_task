@@ -1,8 +1,18 @@
-const Student = require("../../models/student.model");
-const Task = require("../../models/task.model");
+const Student = require('../../models/student.model');
+const Task = require('../../models/task.model');
 
 async function addStudent(req, res) {
   try {
+    const { name, email, department, password } = req.body;
+
+    // Check if the email is already in use
+    const existingStudent = await Student.findOne({ email });
+
+    if (existingStudent) {
+      return res.status(409).json({
+        message: 'Email already exists. Please use a different email.',
+      });
+    }
     const student = new Student(req.body);
     await student.save();
     res.status(201).json({ message: 'Student added successfully' });
